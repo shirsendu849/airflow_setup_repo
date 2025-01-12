@@ -1,5 +1,5 @@
 # Overview
-Apache Airflow is a workflow orchestration tool. In this repository we will be go through with the steps to set up airflow in a AWS EC2 machine. We will install airflow using PyPI airflow package.
+Apache Airflow is an open-source workflow orchestration tool. In this repository we will be go through with the steps to set up airflow in a AWS EC2 machine. We will install airflow using PyPI airflow package.
 
 # Prerequisites
 - AWS free tier account

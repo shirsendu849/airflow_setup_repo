@@ -32,6 +32,5 @@ Apache airflow natively supports Linux/ Debian environment, so we need to instal
   
   ```bash
   $userenv = [System.Environment]::GetEnvironmentVariable("Path", "User")[System.Environment]::SetEnvironmentVariable("PATH", $userenv + ";C:\Users\Administrator\Ubuntu", "User")
-
    
 

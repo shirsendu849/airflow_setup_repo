@@ -25,7 +25,7 @@ Apache airflow natively supports Linux/ Debian environment, so we need to instal
   ```bash
   Rename-Item .\ Ubuntu_2404.0.5.0_x64.appx .\Ubuntu.zip
   Expand-Archive .\Ubuntu.zip .\Ubuntu
-- Navigate to the **.\Ubuntu_2404.0.5.0_x64.appx** file and install the Ubuntu from the .appx file using this command.
+- Navigate to the **.\Ubuntu_2404.0.5.0_x64.appx** file and execute this command to install Ubuntu from the .appx file.
 
    ```bash
   Add-AppxPackage .\Ubuntu_2404.0.5.0_x64.appx

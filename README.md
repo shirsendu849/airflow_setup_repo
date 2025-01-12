@@ -10,7 +10,7 @@ Apache Airflow is an open-source workflow orchestration tool. In this repository
 
 # Installation Process
 ## Spin up AWS EC2
-- Log in to the AWS console and create a new EC2 instance based on Windows Server 2019, choose all the configuration under free tier to avoid unnecessary cost.
+- Log into the AWS console and create a new EC2 instance based on Windows Server 2019, choose all the configuration under free tier to avoid unnecessary cost.
 - Spin up the EC2 instance and connect EC2 in local machine using RDP connection.
 ## Install WSL
 Apache airflow natively supports Linux/ Debian environment, so we need to install WSL on top of windows to get the required environment.

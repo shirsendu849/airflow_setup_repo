@@ -5,7 +5,8 @@ Apache Airflow is a workflow orchestration tool. In this repository we will be g
 - AWS free tier account
 - Knowledge about setting up and spin up AWS EC2
 - Basic knowledge of SQL
-- PgAdmin (GUI tool for Postgtres) set up
+- PgAdmin (GUI tool for Postgtres) setup
+- Shell commands
 
 # Installation Process
 ## Spin up AWS EC2

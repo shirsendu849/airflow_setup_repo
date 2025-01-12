@@ -18,7 +18,7 @@ Apache airflow natively supports Linux/ Debian environment, so we need to instal
   
   ```bash
   Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
-- Download a Linux distribution (Preferably Ubuntu 24.04) from this [official linux download site](https://learn.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions).
+- Download a Linux distribution (Preferably Ubuntu 24.04) from this [official site](https://learn.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions).
 - Restart the EC2 machine and boot again.
 ## Set up Airflow Directory
 - Open command prompt as administrator mode and create a new root directory, go into the directory.

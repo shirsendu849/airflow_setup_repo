@@ -15,7 +15,7 @@ Apache Airflow is an open-source workflow orchestration tool. In this repository
 ## Install WSL
 Apache airflow natively supports Linux/ Debian environment, so we need to install WSL on top of Windows to get the required environment.
 - In EC2 open Power Shell in administrator mode.
-- Execute this command to enable install Windows Subsystem for Linux (WSL) feature.
+- Execute this command to enable Windows Subsystem for Linux (WSL) feature.
   
   ```bash
   Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux

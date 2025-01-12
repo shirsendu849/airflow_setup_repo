@@ -33,7 +33,8 @@ Apache airflow natively supports Linux/ Debian environment, so we need to instal
   
   ```bash
   $userenv = [System.Environment]::GetEnvironmentVariable("Path", "User")[System.Environment]::SetEnvironmentVariable("PATH", $userenv + ";C:\Users\Administrator\Ubuntu", "User")
-- Look for **Ubuntu 24.04 LTS** apllication that basically provide shell for accessing Ubuntu. Set up username and password when you are first time open the shell.
+- Find an application for **Ubuntu 24.04 LTS** that provides a shell interface for accessing the operating system. When you open the shell for the first time, set up a username and password as part of the 
+ initial configuration.
 
 ## Virtual Environment setup
 - **Python 3.12** is pre-installed in **Ubuntu 24.04 LTS**, open ubuntu shell and paste this command to install PIP, check the version.

@@ -3,7 +3,7 @@ Apache Airflow is a workflow orchestration tool. In this repository we will be g
 
 # Prerequisites
 - AWS free tier account
-- Knowledge about setting up and spin up AWS EC2, PostgreSQL
+- Knowledge about setting up and spin up AWS EC2
 - Basic knowledge of SQL
 - PgAdmin (GUI tool for Postgtres) set up
 
@@ -21,4 +21,9 @@ Apache Airflow is a workflow orchestration tool. In this repository we will be g
 
    ```bash
    wsl --version
-## 
+- Restart the EC2 machine and boot again.
+## Set up Airflow Directory
+- Open command prompt as administrator mode and create a new root directory, go into the directory.
+
+```bash
+mkdir 

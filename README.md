@@ -5,6 +5,7 @@ Apache Airflow is a workflow orchestration tool. In this repository we will be g
 - AWS free tier account
 - Knowledge about setting up and spin up AWS EC2, PostgreSQL
 - Basic knowledge of SQL
+- PgAdmin (GUI tool for Postgtres) set up
 
 # Installation Process
 ## Spin up AWS EC2
@@ -13,6 +14,11 @@ Apache Airflow is a workflow orchestration tool. In this repository we will be g
 ## Install WSL
 - In EC2 open command prompt in administrator mode.
 - Execute this command to install Windows Subsystem for Linux (WSL), we will install Ubuntu as a Linux distribution.
+  
   ```bash
   wsl --install -d Ubuntu
-- 
+- Check for the wsl version
+
+   ```bash
+   wsl --version
+## 

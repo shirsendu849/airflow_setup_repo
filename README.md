@@ -14,5 +14,4 @@ Apache Airflow is a workflow orchestration tool. In this repository we will be g
 - In EC2 open command prompt in administrator mode.
 - Execute this command to install Windows Subsystem for Linux (WSL), we will install Ubuntu as a Linux distribution.
   
-  ```bash
-wsl --install -d Ubuntu
+  ```bash wsl --install -d Ubuntu

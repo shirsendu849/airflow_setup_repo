@@ -1,2 +1,4 @@
 # airflow_setup_repo
-This repository will set up airflow in AWS EC2
+Apache Airflow is a workflow orchestration tool. In this repository we will be go through with steps to set up airflow in a AWS EC2 machine.
+
+# 

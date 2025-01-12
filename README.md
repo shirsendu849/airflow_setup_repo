@@ -79,6 +79,7 @@ Apache airflow natively supports Linux/ Debian environment, so we need to instal
   
   ```bash
   pip check
+  
   pip freeze > requirements.txt
 
 ## Metadata DB Setup
@@ -86,7 +87,7 @@ Apache airflow natively supports Linux/ Debian environment, so we need to instal
 - Open new sql editor and fire this queries one by one to create new metadata database for airflow, attach new role and set permission for accessing metadata DB.
   
   ```bash
-  CREATE DATABASE airflow_db;
+  CREATE DATABASE airflow_db WITH ENCODING=’ UTF8’;;
 
   CREATE USER airflow_user WITH PASSWORD 'airflow_pass';
 
@@ -111,8 +112,39 @@ Apache airflow natively supports Linux/ Debian environment, so we need to instal
   nano airflow.cfg
 
   #sql_alchemy_conn = sqlite:////home/mjunctionetl/airflow/airflow.db
-                                                                                                                                               sql_alchemy_conn = 
-  postgresql+psycopg2://airflow_user:Sh06092002%%40@127.0.0.1:5432/airflow_db  
+                                                                                                                                               
+  sql_alchemy_conn = postgresql+psycopg2://airflow_user:airflow_pass@127.0.0.1:5432/airflow_db
+- Set **load_examples** variable from **True** to **False** so that it avoids unnecessary examples load in the **Airflow UI**.
+- Set **executor = LocalExecutor** instead of **SequentialExecutor** for better parallel task execution. 
+- Now save the airflow.cfg file and back to the shell interface.
+- Again run following command to migrate metadata database from Sqlite to Postgres
+  
+  ```bash
+  airflow db migrate
+  
+## Airflow User Creation & Login
+- Execute the following command to create a new user with Admin privilege.
+
+  ```bash
+  airflow users create –-username airflow
+  --password airflow --firstname airflow
+  --lastname user --role Admin
+  --email admin@email.com
+- Now run the airflow scheduler
+
+  ```bash
+  airflow scheduler
+- Open another ubuntu shell, activate virtual environment, navigate root directory and run the airflow webserver
+
+  ```bash
+  cd $AIRFLOW_HOME
+
+  source airflow_env/bin/activate
+
+  airflow webserver
+- Now you can paste this URL in browser and can access the Airflow UI http://localhost:8080
+
+
 
   
    

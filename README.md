@@ -127,6 +127,10 @@ Apache airflow natively supports Linux/ Debian environment, so we need to instal
   
   ```bash
   airflow db migrate
+- Create the dags, plugins, logs folder
+
+  ```bash
+  mkdir dags logs plugins
   
 ## Airflow User Creation & Login
 - Execute the following command to create a new user with Admin privilege.

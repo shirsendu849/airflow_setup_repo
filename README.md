@@ -20,7 +20,7 @@ Apache airflow natively supports Linux/ Debian environment, so we need to instal
   ```bash
   Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 - Download a Linux distribution (preferably Ubuntu 24.04) from this [official site](https://learn.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions).
-- Go to the downloads folder in windows file system and open power shell at this directory. Paste this command to rename the package zipped as Ubuntu and then unzip it.
+- Go to the downloads folder in windows file system and open power shell at this directory. Paste this command to rename the downloaded .zip file as Ubuntu and then unzip it.
 
   ```bash
   Rename-Item .\ Ubuntu_2404.0.5.0_x64.appx .\Ubuntu.zip

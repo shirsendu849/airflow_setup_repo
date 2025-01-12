@@ -56,5 +56,19 @@ Apache airflow natively supports Linux/ Debian environment, so we need to instal
   ```bash
   mkdir airflow
   cd airflow
+- Open the **.bashrc** file and add the following line to update the airflow root directory in the bash profile.
+
+  ```bash
+  nano ~/.bashrc
+  AIRFLOW_HOME=~/airflow
+- Save and exit the file and check if the environment variable works or not. Write following command that should automatically navigate to the airflow root directory from any location.
+
+  ```bash
+  cd $AIRFLOW_HOME
+
+## Airflow Packages Installation and Configuration
+
+## 
+  
    
 

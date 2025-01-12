@@ -67,9 +67,32 @@ Apache airflow natively supports Linux/ Debian environment, so we need to instal
   ```bash
   cd $AIRFLOW_HOME
 
-## Airflow Packages Installation and Configuration
+## Airflow Package Installation
+- To install Apache Airflow with the async, postgres, google, and snowflake extras execute this command
+  
+  ```bash
+  AIRFLOW_VERSION=2.10.4
+  PYTHON_VERSION="$(python -c 'import sys; print(f"{sys.version_info.major}.{sys.version_info.minor}")')"
+  CONSTRAINT_URL="https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-${PYTHON_VERSION}.txt"
+  pip install "apache-airflow[async,postgres,google,snowflake]==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}"
+- Check there is any broken package or not. Now gets all the dependent packages names into the txt file.
+  
+  ```bash
+  pip check
+  pip freeze > requirements.txt
 
-## 
+## Metadata DB Setup
+- Install postgres from the [official site](https://www.postgresql.org/download/windows/) and open **PgAdmin**.
+- Open new sql editor and fire this queries one by one to create new metadata database for airflow, attach new role and set permission for accessing metadata DB.
+  ```bash
+  CREATE DATABASE airflow_db;
+
+  CREATE USER airflow_user WITH PASSWORD 'airflow_pass';
+
+  GRANT ALL PRIVILEGES ON DATABASE airflow_db TO airflow_user;
+
+  GRANT ALL ON SCHEMA public TO airflow_user;
+
   
    
 

@@ -19,9 +19,19 @@ Apache airflow natively supports Linux/ Debian environment, so we need to instal
   ```bash
   Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 - Download a Linux distribution (Preferably Ubuntu 24.04) from this [official site](https://learn.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions).
-- Restart the EC2 machine and boot again.
-## Set up Airflow Directory
-- Open command prompt as administrator mode and create a new root directory, go into the directory.
+- Go to the downloads folder in file system and open power shell in this directory. Paste this command to rename the package zipped as Ubuntu and then unzip it.
 
-```bash
-mkdir 
+  ```bash
+  Rename-Item .\ Ubuntu_2404.0.5.0_x64.appx .\Ubuntu.zip
+  Expand-Archive .\Ubuntu.zip .\Ubuntu
+- Navigate to the **.\Ubuntu_2404.0.5.0_x64.appx** file and install the Ubuntu from the .appx file using this command.
+
+   ```bash
+  Add-AppxPackage .\Ubuntu_2404.0.5.0_x64.appx
+- Add WSL path to the windows environment variable.
+  
+  ```bash
+  $userenv = [System.Environment]::GetEnvironmentVariable("Path", "User")[System.Environment]::SetEnvironmentVariable("PATH", $userenv + ";C:\Users\Administrator\Ubuntu", "User")
+
+   
+

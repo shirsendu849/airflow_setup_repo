@@ -84,6 +84,7 @@ Apache airflow natively supports Linux/ Debian environment, so we need to instal
 ## Metadata DB Setup
 - Install postgres from the [official site](https://www.postgresql.org/download/windows/) and open **PgAdmin**.
 - Open new sql editor and fire this queries one by one to create new metadata database for airflow, attach new role and set permission for accessing metadata DB.
+  
   ```bash
   CREATE DATABASE airflow_db;
 
@@ -92,6 +93,26 @@ Apache airflow natively supports Linux/ Debian environment, so we need to instal
   GRANT ALL PRIVILEGES ON DATABASE airflow_db TO airflow_user;
 
   GRANT ALL ON SCHEMA public TO airflow_user;
+  
+## Airflow Configuration
+- Now open maximize the ubuntu shell and trigger this command to get airflow config file and metadata database instance
+  
+  ```bash
+  airflow db migrate
+- Install postgres package to establish sql alchemy connection.
+
+  ```bash
+  pip install psycopg2-binary
+  
+- Open the airflow.cfg file using the nano editor and locate the sql_alchemy_conn variable in the [database] section. Airflow uses SQLite as the default metadata database. To switch to a new database, comment 
+  out the existing SQLite connection. Then, update the sql_alchemy_conn variable with the new connection string in the following format, replacing it with the database, username, and password you set up earlier.
+
+  ```bash
+  nano airflow.cfg
+
+  #sql_alchemy_conn = sqlite:////home/mjunctionetl/airflow/airflow.db
+                                                                                                                                               sql_alchemy_conn = 
+  postgresql+psycopg2://airflow_user:Sh06092002%%40@127.0.0.1:5432/airflow_db  
 
   
    

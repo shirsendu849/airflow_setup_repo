@@ -102,7 +102,7 @@ Apache airflow natively supports Linux/ Debian environment, so we need to instal
   GRANT ALL ON SCHEMA public TO airflow_user;
   
 ## Airflow Configuration
-- Now open maximize the ubuntu shell and trigger this command to get airflow config file and metadata database instance
+- Now maximize the ubuntu shell and trigger this command to get airflow config file and metadata database instance
   
   ```bash
   airflow db migrate

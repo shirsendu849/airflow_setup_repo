@@ -32,5 +32,6 @@ Apache airflow natively supports Linux/ Debian environment, so we need to instal
   
   ```bash
   $userenv = [System.Environment]::GetEnvironmentVariable("Path", "User")[System.Environment]::SetEnvironmentVariable("PATH", $userenv + ";C:\Users\Administrator\Ubuntu", "User")
+- Look for **Ubuntu 24.04 LTS** apllication that basically provide shell for accessing Ubuntu. Set up username and password when you are first time open the shell.
    
 

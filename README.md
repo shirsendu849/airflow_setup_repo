@@ -33,5 +33,23 @@ Apache airflow natively supports Linux/ Debian environment, so we need to instal
   ```bash
   $userenv = [System.Environment]::GetEnvironmentVariable("Path", "User")[System.Environment]::SetEnvironmentVariable("PATH", $userenv + ";C:\Users\Administrator\Ubuntu", "User")
 - Look for **Ubuntu 24.04 LTS** apllication that basically provide shell for accessing Ubuntu. Set up username and password when you are first time open the shell.
+
+# Virtual Environment setup
+- **Python 3.12** is pre-installed in **Ubuntu 24.04 LTS**, open ubuntu shell and paste this command to install PIP, check the version.
+
+  ```bash
+  sudo apt-get install python3-pip
+  pip --version
+- Execute this command to install package that creates isolated python virtual environment for airflow aplication, to avoid any package conflict.
+
+  ```bash
+  sudo apt-get install python3-venv
+- Create a python virtual environment and activate it.
+
+  ```bash
+  python3 -m venv airflow_env
+  source airflow_env/bin/activate
+
+# Airflow Root Directory Setup
    
 

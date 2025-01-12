@@ -44,7 +44,7 @@ Apache airflow natively supports Linux/ Debian environment, so we need to instal
   sudo apt-get install python3-pip
   
   pip --version
-- Execute this command to install package that creates isolated python virtual environment for airflow aplication, to avoid any package conflict.
+- Run the following command to install a package that creates an isolated Python virtual environment for the Airflow application, ensuring there are no package conflicts.
 
   ```bash
   sudo apt-get install python3-venv

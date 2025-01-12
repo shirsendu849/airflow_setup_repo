@@ -24,6 +24,7 @@ Apache airflow natively supports Linux/ Debian environment, so we need to instal
 
   ```bash
   Rename-Item .\ Ubuntu_2404.0.5.0_x64.appx .\Ubuntu.zip
+  
   Expand-Archive .\Ubuntu.zip .\Ubuntu
 - Navigate to the **.\Ubuntu_2404.0.5.0_x64.appx** file and execute this command to install Ubuntu from the .appx file.
 
@@ -51,6 +52,7 @@ Apache airflow natively supports Linux/ Debian environment, so we need to instal
 
   ```bash
   python3 -m venv airflow_env
+  
   source airflow_env/bin/activate
 
 ## Airflow Root Directory Setup
@@ -58,11 +60,13 @@ Apache airflow natively supports Linux/ Debian environment, so we need to instal
 
   ```bash
   mkdir airflow
+  
   cd airflow
 - Open the **.bashrc** file and add the following line to update the airflow root directory in the bash profile.
 
   ```bash
   nano ~/.bashrc
+  
   AIRFLOW_HOME=~/airflow
 - Save and exit the file and check if the environment variable works or not. Write following command that should automatically navigate to the airflow root directory from any location.
 
